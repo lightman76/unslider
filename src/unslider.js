@@ -166,6 +166,7 @@
 
 		//  Autoplay functionality
 		_.play = function() {
+			if(_.t) _.t = clearInterval(_.t);
 			_.t = setInterval(function() {
 				_.to(_.i + 1);
 			}, _.o.delay | 0);
